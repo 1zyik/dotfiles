@@ -1,0 +1,101 @@
+format = """
+$sudo\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$docker_context\
+$nodejs\
+$cmd_duration $jobs $time $memory_usage\
+$line_break\
+$character"""
+
+
+[sudo]
+style = "bold green"
+symbol = "🧙"
+format = "[$symbol]($style) "
+disabled = false
+
+
+[username]
+style_root = "bold green"
+style_user = "bold green"
+format = "[$user]($style) in "
+disabled = false
+show_always = true
+
+
+[hostname]
+ssh_only = true
+ssh_symbol = "🌐"
+format = "[$ssh_symbol$hostname]($style) in "
+style = "bold dimmed green"
+disabled = false
+
+
+[directory]
+style = "bold blue"
+disabled = false
+format = "[$path]($style)[$read_only]($read_only_style) "
+home_symbol = " "
+read_only = "🔒"	
+truncation_length = 4
+truncate_to_repo = false
+
+
+[git_branch]
+symbol = " "
+format = "[on $symbol$branch]($style) "
+style = "bold purple"
+
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bold yellow"
+
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold yellow"
+
+
+[git_metrics]
+disabled = false
+
+
+[docker_context]
+symbol = "🐳"
+only_with_files = true
+format = "[$symbol $context]($style) "
+style = "blue bold"
+disabled = false
+detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+
+
+[fill]
+symbol = " "
+
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[❮](green)"
+
+
+[jobs]
+symbol = ""
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
