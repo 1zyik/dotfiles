@@ -5,6 +5,11 @@
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
+alias ..="cd ../"
+alias ~="cd ~"
+alias ..2="cd ../../"
+alias ..3="cd ../../../"
+alias ..4="d ../../../../"
 
 
 # Terraform
@@ -47,7 +52,7 @@ alias gcln='git branch | grep -v "main" | xargs git branch -D'
 ################################
 alias pu_git='git config user.name "1zyik"'
 alias pe_git='git config user.email "isaacadepitan@gmail.com"'
-alias wu_git='git config user.name "isaac-{job}"' 
+alias wu_git='git config user.name "isaac-{job}"'
 alias we_git='git config user.email "isaac@{job-mail}"'
 
 
