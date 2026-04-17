@@ -59,3 +59,17 @@ alias we_git='git config user.email "isaac@{job-mail}"'
 # Kubernetes
 ################################
 alias k="kubectl"
+
+# Docker
+################################
+alias d='docker'
+alias dprune='docker system prune -a --volumes'
+alias dimg='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dtop='docker top '
+alias dbxl='docker buildx build --platform linux/amd64 '
+alias drdp='docker run -d -p '
+alias drm='docker rmi -f '
+alias dstpa='docker stop $(docker ps -q)'
+alias dstp='docker stop '
