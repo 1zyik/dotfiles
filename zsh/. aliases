@@ -48,14 +48,6 @@ alias gpom='git push origin main'
 alias gclr='git stash; git clear'
 alias gcln='git branch | grep -v "main" | xargs git branch -D'
 
-# Configure Git
-################################
-alias pu_git='git config user.name "1zyik"'
-alias pe_git='git config user.email "isaacadepitan@gmail.com"'
-alias wu_git='git config user.name "isaac-{job}"'
-alias we_git='git config user.email "isaac@{job-mail}"'
-
-
 # Kubernetes
 ################################
 alias k="kubectl"
